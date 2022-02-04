@@ -45,10 +45,12 @@
   .f {
     background-image: url(images/tom1.png);
     background-repeat: no-repeat;
+    
   }
   
   .a {
     background-image: url(images/tom2.png);
+    
   }
   
   .s {
@@ -127,6 +129,37 @@
       font-size: 3.5rem;
     }
   }
+
+  .piano {
+    display: flex;
+  }
+  
+  .key {
+    height: calc(var(--width) * 4);
+    width: var(--width);
+  }
+  
+  .white {
+    --width: 100px;
+    background-color: white;
+    border: 1px solid #333;
+  }
+  
+  .white.active {
+    background-color: #CCC;
+  }
+  
+  .black {
+    --width: 60px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+  }
+  
+  .black.active {
+    background-color: #333;
+  }  
 
 /* SOCIAL PANEL CSS */
 .social-panel-container {
@@ -250,9 +283,26 @@
 	z-index: 999;
 }
 
+.floating-btn2 {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+  text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	right: 200px;
+	z-index: 999;
+}
+
 .floating-btn:hover {
-	background-color: #ffffff;
-	color: #001F61;
+	background-color: #001F61;
+	color: red;
 }
 
 .floating-btn:focus {
@@ -277,6 +327,17 @@
 	color: #FF7500;
 	text-decoration: none;
 }
+
+.floating-btn2:hover {
+	background-color: #cc1a23;
+	color: #001F61;
+}
+
+.floating-btn2:focus {
+	outline: none;
+}
+
+
 
 @media screen and (max-width: 480px) {
 
